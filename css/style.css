@@ -1,0 +1,183 @@
+/*-----------------------------------*\
+	Globel 
+\*-----------------------------------*/
+*{
+	box-sizing: border-box;
+	position: relative;
+}
+h2,p{
+	margin:0;
+}
+p{
+	font-family: '微軟正黑體';
+}
+
+/*-----------------------------------*\
+	Component 
+\*-----------------------------------*/
+
+/* btn */
+.btn{
+	font-family: '微軟正黑體';
+	font-weight: 700;
+	display: inline-block;
+	color: #666;
+	text-decoration: none;
+	font-size: 16px;
+	padding: 16px 32px;
+	border-radius: 5px;
+	font-weight: 400;
+	border: 2px solid #666;
+	transition: all 0.3s;
+}
+.btn:hover{
+	background-color: #666;
+	color: #fff;
+}
+
+/* image-container */
+.image-container{
+	width: 100%;
+}
+.image-container:before{
+	content: "";
+	display: block;
+	width: 100%;
+	padding-top: 133.333333%;
+}
+.image-ratio-1-1:before{
+	padding-top: 100%;
+}
+.image-container .image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* hero */
+.hero{
+	padding-top: 200px;
+	padding-bottom: 200px;
+}
+
+/* product-item */
+.product-item{
+	margin-bottom: 320px;
+}
+.product-item:last-child{
+	margin-bottom: 0;
+}
+.product-item .title{
+	font-size: 64px;
+	color: #484848;
+	font-weight: 600;
+	margin-bottom: 32px;
+}
+.product-item .title--left{
+	margin-left: -64px;
+}
+.product-item .para{
+	font-size: 20px;
+	line-height: 32px;
+	color: #484848;
+	font-weight: 300;
+	letter-spacing: 1px;
+	margin-bottom: 48px;
+}
+
+/*-----------------------------------*\
+	Animation
+\*-----------------------------------*/
+.product-item.animated .image-container .image{
+	animation: ani-fadeIn 0.5s 0.6s backwards;
+}
+@keyframes ani-fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.product-item.animated .image-container:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top:0;
+	width: 0%;
+	height: 0%;
+	background-color: #484848;
+	animation: 
+		ani-drawLine 0.3s,
+		ani-fillWidth 0.2s 0.3s,
+		ani-blockOut 0.2s 0.5s;
+}
+
+@keyframes ani-drawLine{
+	0%{
+		width:8px;
+		height: 0%;
+	}
+	100%{
+		width:8px;
+		height:100%;
+	}
+}
+
+@keyframes ani-fillWidth{
+	0%{
+		width: 8px;
+		height:100%;
+	}
+	100%{
+		width: 100%;
+		height: 100%;
+	}
+}
+@keyframes ani-blockOut{
+	0%{
+		/*inherit:將原本位置歸零*/
+		left: inherit;
+		right:0;
+		width: 100%;
+		height: 100%;
+	}
+	100%{
+		left: inherit;
+		right:0;
+		width: 0%;
+		height:100%;
+	}
+}
+
+.product-item.animated .title{
+	animation: ani-fadeInUp 0.5s 0.5s backwards;
+}
+.product-item.animated .para{
+	animation: ani-fadeInUp 0.5s 0.65s backwards;
+}
+.product-item.animated .btn{
+	animation: ani-fadeInUp 0.5s 0.9s backwards;
+}
+@keyframes ani-fadeInUp{
+	0%{
+		opacity: 0;
+		transform: translate(0,50px);
+	}
+	100%{
+		opacity: 1;
+		transform: translate(0,0);
+	}
+}
+
+.box{
+	width: 100px;
+	height: 100px;
+	background-color: pink;
+	margin: 0 auto;
+}

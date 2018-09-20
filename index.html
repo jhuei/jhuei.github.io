@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+
+		<!-- Start group -->
+		<div class="hero">
+			<div class="container">
+				<div class="product-item wow">
+					<div class="row align-items-center">
+						<div class="col-md-6">
+							<div class="image-container rellax">
+								<div class="image" style="background-image: url(imgs/img1.jpg);"></div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<h2 class="title title--left">
+								<span>Lorem ipsum dolor sit amet, consectetur.</span>
+							</h2>
+							<p class="para">
+								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus vitae rerum tenetur maiores, similique molestiae harum modi minima numquam sapiente laborum, animi nemo aut quaerat.</span>
+							</p>
+							<a href="#!" class="btn">MORE.</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hero">
+			<div class="container">
+				<div class="product-item wow">
+					<div class="row align-items-center">
+						<div class="col-md-6">
+							<h2 class="title">
+								<span>Lorem ipsum dolor sit amet, consectetur.</span>
+							</h2>
+							<p class="para">
+								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus vitae rerum tenetur maiores, similique molestiae harum modi minima numquam sapiente laborum, animi nemo aut quaerat.</span>
+							</p>
+							<a href="#!" class="btn">MORE.</a>
+						</div>
+						<div class="col-md-6">
+							<div class="image-container image-ratio-1-1 rellax">
+								<div class="image" style="background-image: url(imgs/img2.jpg);"></div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hero">
+			<div class="container">
+				<div class="product-item wow">
+					<div class="row align-items-center">
+						<div class="col-md-6">
+							<div class="image-container rellax">
+								<div class="image" style="background-image: url(imgs/img3.jpg);"></div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<h2 class="title title--left">
+								<span>Lorem ipsum dolor sit amet, consectetur.</span>
+							</h2>
+							<p class="para">
+								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus vitae rerum tenetur maiores, similique molestiae harum modi minima numquam sapiente laborum, animi nemo aut quaerat.</span>
+							</p>
+							<a href="#!" class="btn">MORE.</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End group -->
+	</div>
+</body>
+
+<script src="js/wow.min.js"></script>
+<script src="js/rellax.min.js"></script>
+<script>
+	//wow
+		var wow = new WOW({
+	    //offset:觸發視窗的位置 (例:200 :偏移200px)
+	    offset: 200
+	});
+	wow.init();
+
+	//rellax
+	var rellax = new Rellax('.rellax', {
+    center: true
+    });
+</script>
+
+</html>
